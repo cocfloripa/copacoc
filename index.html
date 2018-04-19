@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+Criado por Thiago Bogut - contato@thiagobogut.com – Publish – COC Floripa | Escola SEB
+
+Código adaptado do Guilherme Afonso - http://twitter.com/guilhermeafonso - Não Salvo 2018
+Sim, é uma cópia do https://disneybracket.com/
+
+-->
+<head>
+<title>Qual a sua matéria favorita?</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="canonical" href="" />
+<link rel="me" href="">
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Copa do Mundo COC Floripa - Qual a sua matéria favorita?" />
+<meta property="og:description" content="Já estamos no clima da Copa do Mundo! Clique aqui e descubra qual sua matéria favorita no COC Floripa | Escola SEB" />
+<meta property="og:url" content="http://coc.thiagobogut.com/" />
+<meta property="og:site_name" content="COC Floripa | Escola SEB" />
+<meta property="article:publisher" content="A" />
+<meta property="article:section" content="Geral" />
+<meta property="article:published_time" content="2018-04-03T16:31:03-03:00" />
+<meta property="article:modified_time" content="2018-04-03T17:10:56-03:00" />
+<meta property="og:updated_time" content="2018-04-03T17:10:56-03:00" />
+<meta property="og:image" content="http://coc.thiagobogut.com/img/logo.png" />
+<meta property="og:image:secure_url" content="A" />
+<meta property="og:image:width" content="790" />
+<meta property="og:image:height" content="450" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Já estamos no clima da Copa do Mundo! Clique aqui e descubra qual sua matéria favorita no COC Floripa | Escola SEB" />
+<meta name="twitter:title" content="Qual a sua matéria favorita?" />
+<meta name="twitter:image" content="http://coc.thiagobogut.com/img/logo.png" />
+
+
+<script>
+
+function clickedOn(idnum,childnum) {
+	var was = document.getElementById("img"+childnum).src;
+	document.getElementById("img"+childnum).src = document.getElementById("img"+idnum).src;
+	if (was.substr(-9,9) != 'pixel.png') {
+		for (var i = childnum; i < 64; i++) {
+			if (document.getElementById("img"+i).src == was) {
+				document.getElementById("img"+i).src = document.getElementById("img"+idnum).src;
+			}
+		}
+	}
+	var anyblanks = 0;
+	passer = '';
+	for (var i = 33; i < 64; i++) {
+		if (document.getElementById("img"+i).src.substr(-9,9) == 'pixel.png') {
+			anyblanks = 1;
+		}
+		var path = document.getElementById("img"+i).src.split("/");
+		var img = path.pop();
+		passer = passer + img.substring(0,img.length-4) + ':';
+	}
+	if (!anyblanks) {
+//		
+		window.scrollTo(0,0);
+		document.getElementById("share").style ="color:black;font-family:sans-serif;position:absolute;top:540px;left:1040px;opacity: 1";
+		document.getElementById("clicktext").innerHTML="<b>Tira um print e posta logo!<b>";
+		
+		
+//		console.log(passer);
+	}
+}
+</script>
+</head>
+<body id="capture">
+<b id="clicktext" style="position:absolute;left:10px;top:10px;color:black;font-family:sans-serif;visibility:visible">Clique nas matérias abaixo para escolher a sua favorita</b>
+<!-- <a id="lock" style="position:absolute;left:30px;top:10px;color:black;font-family:sans-serif;visibility:hidden" href="javascript:void(0)"> -->
+<div id="imagemzinha" align="center"></div>
+<p>&nbsp;</p>
+<div id="jogo">
+<img src="img/bracket_3.png" style="position:absolute;top:92px;left:0px;">
+<img src="img/logo.png" width="300" style="position:absolute;left:860px;top:0px;">
+<a href="javascript:void(0)" onclick="clickedOn(1,33)"><img id="img1" src="img/1.png" width="125" height="50" style="position:absolute;top:58px;left:15px"></a>
+<a href="javascript:void(0)" onclick="clickedOn(2,33)"><img id="img2" src="img/2.png" width="125" height="50" style="position:absolute;top:117px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(3,34)"><img id="img3" src="img/3.png" width="125" height="50" style="position:absolute;top:175px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(4,34)"><img id="img4" src="img/4.png" width="125" height="50" style="position:absolute;top:233px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(5,35)"><img id="img5" src="img/5.png" width="125" height="50" style="position:absolute;top:291px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(6,35)"><img id="img6" src="img/6.png" width="125" height="50" style="position:absolute;top:350px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(7,36)"><img id="img7" src="img/7.png" width="125" height="50" style="position:absolute;top:407px;left:15px">
+</a><a href="javascript:void(0)" onclick="clickedOn(8,36)"><img id="img8" src="img/8.png" width="125" height="50" style="position:absolute;top:465px;left:15px">
+</a>
+<a href="javascript:void(0)" onclick="clickedOn(33,49)"><img id="img33" src="img/pixel.png" width="180" height="72" style="position:absolute;top:72px;left:153px"></a>
+<a href="javascript:void(0)" onclick="clickedOn(34,49)"><img id="img34" src="img/pixel.png" width="180" height="72" style="position:absolute;top:188px;left:153px"></a>
+<a href="javascript:void(0)" onclick="clickedOn(35,50)"><img id="img35" src="img/pixel.png" width="180" height="72" style="position:absolute;top:305px;left:153px"></a>
+<a href="javascript:void(0)" onclick="clickedOn(36,50)"><img id="img36" src="img/pixel.png" width="180" height="72" style="position:absolute;top:421px;left:153px"></a>
+    
+    
+<a href="javascript:void(0)" onclick="clickedOn(49,57)"><img id="img49" src="img/pixel.png" width="250" height="100" style="position:absolute;top:109px;left:300px"></a>
+<a href="javascript:void(0)" onclick="clickedOn(50,57)"><img id="img50" src="img/pixel.png" width="250" height="100" style="position:absolute;top:342px;left:300px"></a>
+
+<a href="javascript:void(0)" onclick="clickedOn(57,63)"><img id="img57" src="img/pixel.png" width="350" height="140" style="position:absolute;top:199px;left:545px"></a>
+
+<div style="color:black;font-family:sans-serif;position:absolute;top:540px;left:1040px;opacity: 0" id="share">
+    <div class="tw-share">
+		<a class="twitter-share-button" href="A" data-size="large">Tweet</a> 
+	</div>
+	<div class="fb-share-button" data-href="A" data-layout="button" data-size="large" data-mobile-iframe="true">
+		<a target="_blank" href="A" class="fb-xfbml-parse-ignore">Compartilhar</a>
+	</div>
+
+
+</div>
+<div style="color:black;font-family:sans-serif;position:absolute;top:380px;left:900px;width:200px;text-align:center;" id="print">
+		<b>Não esquece de tirar um print e compartilhar o resultado!</b>
+</div>
+
+</div>
+</body>
+</html>
